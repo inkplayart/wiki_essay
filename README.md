@@ -6,6 +6,10 @@ Searches Wikipedia for articles, then writes an essay about them.
 
 This starter code is designed to use the openAI API. It uses gpt-3.5 and gpt-4, so if you increase the number of iterations it may cost a lot. You are assuming that responsiblity for yourself!
 
+## Required libraries
+
+This code relies on the requests and openai libraries. Both can be installed via pip or your favorite package manager.
+
 ## Getting started
 
 Think of this as starter code. It uses the openAI API and two models: gpt-3.5-turbo (the 4K context version) is used to extract the search terms and Wikipedia summaries. gpt-4 is used to generate the essay itself. If you want to use another model modify the `get_response` function, which is on line 35.
