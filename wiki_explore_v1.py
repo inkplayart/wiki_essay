@@ -11,6 +11,10 @@ meta = [api_key,gptmodel]
 
 current_search_term = "ENIAC"
 filename = "ENIAC.txt"
+num_results = 15 #change tihs to whatever you want. More means more options, fewer means more relevant
+num_iterations = 6 #more iterations means more information, but higher chance of getting into WEIRD territory
+
+
 
 """
 This function, get_response(query, meta_data), is designed to interact with the OpenAI GPT model using the ChatCompletion API.
@@ -136,8 +140,8 @@ prompt = "Given the following Wikipedia summary text, generate five wikipedia se
 what_i_learned = ""
 search_terms = [current_search_term]
 seen = []
-num_results = 15 #change tihs to whatever you want. More means more options, fewer means more relevant
-for i in range(1,6): #running it 6 times, but change it if you want more
+
+for i in range(1,num_iterations): 
     search_results = get_wikipedia_search_results(current_search_term, num_results)
     titles = []
     for result in search_results:
